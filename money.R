@@ -1,7 +1,7 @@
 library(sqldf)
 library(lubridate)
 
-txns <- read.csv("2013_10_10.csv")
+txns <- read.csv("../2013_10_10.csv")
 colnames(txns)[9] <- "folder"
 txns$Date <- as.POSIXct(txns$Date)
 txns$month <- floor_date(txns$Date, "month")
